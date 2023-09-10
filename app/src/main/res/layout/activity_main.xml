@@ -9,7 +9,7 @@
     <LinearLayout
         android:layout_below="@+id/followers"
         android:id="@+id/container"
-        android:layout_margin="8dp"
+        android:layout_margin="18dp"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:orientation="vertical">
@@ -46,9 +46,10 @@
         android:layout_below="@+id/githubUserTV"
         android:gravity="left"
         android:padding="8dp"
-        android:text="Followers"
+        android:text="Followers: "
+        android:textStyle="italic"
         android:textColor="@color/black"
-        android:textSize="16sp" />
+        android:textSize="18sp" />
 
     <TextView
         android:id="@+id/noFollowersTV"

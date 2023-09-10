@@ -9,7 +9,7 @@ public func downloadData(activity: JObject, url: String) async {
 
   var request = URLRequest(url: URL(string: url)!,timeoutInterval: Double.infinity)
   request.addValue("application/vnd.github+json", forHTTPHeaderField: "Accept")
-  request.addValue("Bearer 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", forHTTPHeaderField: "Authorization")
+  request.addValue("Bearer XXXXXXX", forHTTPHeaderField: "Authorization")
   request.addValue("2022-11-28", forHTTPHeaderField: "X-GitHub-Api-Version")
 
   request.httpMethod = "GET"

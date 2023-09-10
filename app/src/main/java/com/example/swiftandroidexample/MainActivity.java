@@ -33,7 +33,7 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private ProgressBar progressBar;
-    private TextView noFollowersTV;
+    private TextView noFollowersTV, followersHeadingTV;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -62,6 +62,7 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = (RecyclerView) findViewById(R.id.recyclerview);
         progressBar = (ProgressBar) findViewById(R.id.progressBar);
         noFollowersTV = (TextView) findViewById(R.id.noFollowersTV);
+        followersHeadingTV = (TextView) findViewById(R.id.followers);
     }
 
     public void onDataLoaded(String data) {
@@ -88,6 +89,7 @@ public class MainActivity extends AppCompatActivity {
         Runnable myRunnable = new Runnable() {
             @Override
             public void run() {
+                followersHeadingTV.setText("Followers: ("+githubFollowerModels.size()+")");
                 if (githubFollowerModels.size() == 0) {
                     progressBar.setVisibility(View.GONE);
                     noFollowersTV.setVisibility(View.VISIBLE);
